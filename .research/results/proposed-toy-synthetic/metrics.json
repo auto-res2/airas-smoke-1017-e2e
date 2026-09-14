@@ -1,0 +1,8 @@
+{
+  "accuracy": 0.75,
+  "balanced_accuracy": 0.75,
+  "f1_macro": 0.75,
+  "matthews_corrcoef": 0.625,
+  "precision_macro": 0.75,
+  "recall_macro": 0.75
+}
