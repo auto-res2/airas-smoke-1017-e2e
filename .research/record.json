@@ -21,11 +21,63 @@
               "runs": [
                 {
                   "run_id": "proposed-toy-synthetic",
-                  "description": "疎通確認用のトイ run。GPU も学習も使わない。"
+                  "description": "疎通確認用のトイ run。GPU も学習も使わない。",
+                  "results": [
+                    {
+                      "id": "847b5c36-f787-4f06-a501-0a53eff998c3",
+                      "commit": "58b7e374f2e905e304e4d872ba6b800b942d1e36",
+                      "eval_inputs": {
+                        "path": ".research/results/proposed-toy-synthetic/eval_inputs/classification.json",
+                        "sha256": "53578cdc346c018f709da70f5698063eca9630b9e7bf5a7a4a5e96562eff7ba9"
+                      },
+                      "eval_report": {
+                        "task_type": "classification",
+                        "task_signature": "classification/v1@3891a17b440a",
+                        "inputs_sha256": "a20886e9a57977c68d8a9ba2b1bdf8ede541b04cef342613dc18be0708202942",
+                        "versions": {
+                          "airas-eval": "0.10.0",
+                          "numpy": "2.4.6",
+                          "scikit-learn": "1.9.0"
+                        },
+                        "metrics": {
+                          "accuracy": 0.75,
+                          "balanced_accuracy": 0.75,
+                          "f1_macro": 0.75,
+                          "matthews_corrcoef": 0.625,
+                          "precision_macro": 0.75,
+                          "recall_macro": 0.75
+                        },
+                        "inputs_summary": {
+                          "n_examples": 12.0
+                        },
+                        "skipped": {
+                          "missing_dependency": {},
+                          "missing_optional_input": [
+                            "log_loss",
+                            "expected_calibration_error",
+                            "top_5_accuracy",
+                            "n_classes"
+                          ],
+                          "not_applicable": {},
+                          "undefined_on_data": {}
+                        }
+                      },
+                      "metrics": {
+                        "accuracy": 0.75,
+                        "balanced_accuracy": 0.75,
+                        "f1_macro": 0.75,
+                        "matthews_corrcoef": 0.625,
+                        "precision_macro": 0.75,
+                        "recall_macro": 0.75
+                      }
+                    }
+                  ]
                 }
               ]
             }
           ],
+          "verified": true,
+          "verdict": "supported",
           "criterion": {
             "metric": "accuracy",
             "subject": "proposed-toy-synthetic",
