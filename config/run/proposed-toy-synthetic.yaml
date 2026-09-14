@@ -1,0 +1,7 @@
+run_id: proposed-toy-synthetic
+n_classes: 3
+n_examples:
+  sanity: 12
+  pilot: 60
+  full: 240
+error_every: 4
