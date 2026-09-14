@@ -1,1 +1,44 @@
-{}
+{
+  "hypotheses": [
+    {
+      "id": "h1",
+      "statement": "疎通確認用のトイ仮説: 決定的に生成した合成ラベルに対し、規則的に 1/4 を誤らせた予測器の正解率は 0.5 を上回る。",
+      "assumptions": [
+        "合成データの正解率が予測器の性質を表す(c1)"
+      ],
+      "claims": [
+        {
+          "id": "c1",
+          "statement": "proposed-toy-synthetic の accuracy は 0.5 以上である。",
+          "rationale": "h1 の主張そのものを 1 つの run で直接測る。",
+          "verifier": {
+            "kind": "seyval"
+          },
+          "designs": [
+            {
+              "id": "d1",
+              "summary": "合成ラベル 240 件に対する決定的な予測を classification タスクで採点する。",
+              "runs": [
+                {
+                  "run_id": "proposed-toy-synthetic",
+                  "description": "疎通確認用のトイ run。GPU も学習も使わない。"
+                }
+              ]
+            }
+          ],
+          "criterion": {
+            "metric": "accuracy",
+            "subject": "proposed-toy-synthetic",
+            "reference": 0.5,
+            "op": ">="
+          },
+          "prediction": {
+            "low": 0.2,
+            "high": 0.3,
+            "basis": "1/4 を意図的に誤らせる生成規則から 0.75 前後になる見込み"
+          }
+        }
+      ]
+    }
+  ]
+}
